@@ -1,0 +1,175 @@
+<index.html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy National Girlfriend Day  </title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      color: #ff69b4;
+      font-family: 'Pasifico', cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    h2.sub {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #ff69b4;
+    }
+
+    p.intro {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    a.button, button.button {
+      background-color: #ffb6c1;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 1.5em;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    a.button:hover, button.button:hover {
+      background-color: #ff69b4;
+    }
+
+    .floating-hearts {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    #letterSection {
+      display: none;
+      margin-top: 60px;
+      animation: fadeIn 1s ease-in-out;
+      position: relative;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    #letterSection p {
+      font-size: 1.9em;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+
+    .slogan {
+      font-size: 1.8em;
+      margin-top: 40px;
+      color: #ff1493;
+      font-weight: bold;
+    }
+
+    .heart {
+      position: fixed;
+      top: -50px;
+      left: 50%;
+      font-size: 25px;
+      color: #ff1493;
+      animation: fall 5s linear infinite;
+      z-index: 999;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-200px) translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-hearts">💗 💕 💖 💞</div>
+ 
+  <h2 class="sub">Happy National Girlfriend Day Sayanggkuw 💗</h2>
+  <p class="intro">You're the sweetest part of my life 💗</p>
+
+  <!-- 🎀 Gallery Images -->
+  <div class="gallery">
+    <img src="img11.jpg" alt="Cute moment 1">
+    <img src="img2.jpg" alt="Cute moment 2">
+    <img src="img3.jpg" alt="Cute moment 3">
+    <img src="img4.jpg" alt="Cute moment 4">
+  </div>
+
+  <button class="button" onclick="showLetter()">Klik inii Sayangg🎁</button>
+
+  <!-- 💌 Letter Section -->
+  <div id="letterSection">
+    <h2>You're My Everything 💘</h2>
+    <p>
+      Dear Rahmania Putri ,<br><br>
+      Happy National Girlfriend Day sayanggg 💗, kamuuuu  adalahhh kadoo terindahh akuuuu 😆 , makasiii yaaa udahh bikinn akuu bahagiaaa samaa udahh buatt harii harii akuu terasaaa spesialll. lovee youu sayangg 🤍🫰 <br><br>
+      I hope this little surprise brings a smile to your face. I love you more than you’ll ever know, more than I ever showed to you,
+      and I’ll always be here for you.🫰😚 <br><br>
+      For yours,<br>
+      Sonnn66.
+    </p>
+
+    <!-- 💫 Slogan at the end instead of image -->
+    <div class="slogan">RAZMA  Always Forever 💞</div>
+  </div>
+
+  <script>
+    function showLetter() {
+      document.getElementById("letterSection").style.display = "block";
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
+      for (let i = 0; i < 30; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = `${Math.random() * 100}%`;
+        heart.style.fontSize = `${20 + Math.random() * 20}px`;
+        heart.innerHTML = '💖';
+        document.body.appendChild(heart);
+        setTimeout(() => {
+          heart.remove();
+        }, 5000 + i * 100);
+      }
+    }
+  </script>
+</body>
+</html>
